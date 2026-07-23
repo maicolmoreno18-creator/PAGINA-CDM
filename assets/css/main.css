@@ -1,0 +1,75 @@
+/* =============================================
+   PrefabHome — Variables & Base Styles
+   ============================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --gray: #64748b;
+    --light: #f8fafc;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: #1e293b;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent FOUC — hide AOS elements until library initializes */
+/* AOS adds .aos-init to body once loaded, so elements stay visible if AOS fails */
+.aos-init [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+/* Utility Classes */
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent), #fbbf24, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

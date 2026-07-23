@@ -1,0 +1,179 @@
+/* =============================================
+   Construsoluciones del Meta — Responsive
+   ============================================= */
+
+/* ---- GLOBAL: evitar scroll horizontal ---- */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* ---- DESKTOP GRANDE (max 1200px) ---- */
+@media (max-width: 1200px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---- TABLET (max 992px) ---- */
+@media (max-width: 992px) {
+
+    /* Hero */
+    .hero-title { font-size: 2.6rem; }
+    .hero-section .container { padding-top: 130px; }
+
+    /* Galería */
+    .gallery-img-lg { height: 260px; }
+
+    /* Slider obras */
+    #sliderImg { height: 360px !important; }
+
+    /* Costos */
+    .cost-factor-card { margin-bottom: 0; }
+    .payment-card { margin-bottom: 0; }
+
+    /* About: imagen principal ocupa todo */
+    .main-img { width: 100%; }
+    .floating-img { display: none; }
+    .experience-badge { right: 10px; top: 10px; }
+}
+
+/* ---- MÓVIL (max 768px) ---- */
+@media (max-width: 768px) {
+
+    /* Shapes del hero causan overflow — ocultar */
+    .hero-shapes { display: none !important; }
+
+    /* Hero */
+    .hero-title { font-size: 2rem; }
+    .hero-section .container { padding-top: 110px; }
+    .hero-section .btn-lg {
+        padding: 0.7rem 1.4rem !important;
+        font-size: 0.9rem;
+    }
+
+    /* Badges del hero: no recortar */
+    .hero-section .d-flex.flex-wrap.gap-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-section .badge {
+        white-space: normal;
+        font-size: 0.82rem !important;
+        max-width: 100%;
+    }
+
+    /* Estadísticas hero */
+    .hero-section .counter { font-size: 1.5rem; }
+
+    /* Secciones */
+    .py-6 { padding-top: 3rem; padding-bottom: 3rem; }
+    .display-5 { font-size: 1.65rem; }
+
+    /* About */
+    .floating-img { display: none; }
+    .main-img { width: 100%; }
+    .experience-badge { right: 8px; top: 8px; padding: 0.7rem; }
+
+    /* Galería */
+    .gallery-img-lg { height: 200px; }
+    .gallery-img { height: 180px; }
+
+    /* Slider obras grande */
+    #sliderImg { height: 240px !important; }
+
+    /* Flechas sliders pequeñas */
+    .slider-btn {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 14px !important;
+    }
+
+    .slider-btn--lg {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 20px !important;
+    }
+
+    /* Proceso */
+    .process-card { margin-bottom: 0.5rem; }
+
+    /* Contacto: form apilado */
+    #contactForm .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-info-card { padding: 1.5rem !important; }
+    .contact-icon-lg { width: 46px; height: 46px; }
+
+    /* Costos: requisitos del lote en 2 columnas */
+    .cost-factor-card { margin-bottom: 0; }
+
+    /* Plan de pagos: apilado */
+    .payment-card .display-4 { font-size: 2.8rem; }
+
+    /* Footer */
+    .d-flex.flex-wrap.justify-content-between {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* ---- MÓVIL PEQUEÑO (max 576px) ---- */
+@media (max-width: 576px) {
+
+    /* Navbar */
+    .navbar-brand img { height: 22px !important; }
+
+    /* Hero */
+    .hero-title { font-size: 1.7rem; }
+    .hero-section .container { padding-top: 95px; }
+
+    /* Botones hero en columna */
+    .hero-section .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-section .btn-lg {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Títulos */
+    .display-5 { font-size: 1.45rem; }
+    .display-2 { font-size: 2rem; }
+
+    /* Galería */
+    .gallery-img-lg { height: 160px; }
+    .gallery-img { height: 160px; }
+
+    /* Slider obras */
+    #sliderImg { height: 200px !important; }
+
+    /* Proceso */
+    .process-number { font-size: 2rem; }
+    .process-icon { width: 55px; height: 55px; }
+
+    /* Costos: requisitos en columna */
+    .cost-factor-card { padding: 1rem !important; }
+    .payment-card .display-4 { font-size: 2.2rem; }
+    .payment-card { padding: 1.5rem !important; }
+
+    /* Contacto */
+    .contact-icon-lg { width: 40px; height: 40px; font-size: 1rem !important; }
+
+    /* Footer */
+    .trabaja-btn { font-size: 0.75rem; padding: 0.3rem 0.8rem; }
+    footer .col-lg-4,
+    footer .col-lg-2 { margin-bottom: 1.5rem; }
+
+    /* Misión/Visión card header */
+    .card-header h3 { font-size: 1.3rem; }
+
+    /* Modelos: cards full width */
+    .model-card .card-img-wrapper img { height: 200px; }
+}

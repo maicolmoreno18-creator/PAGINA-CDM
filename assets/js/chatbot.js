@@ -40,7 +40,7 @@
             },
             {
                 keywords: ['perfilería', 'perfileria', 'perfil k', 'perfil h', 'perfil u', 'canal', 'cometida', 'punto de luz', 'puntos eléctric'],
-                answer: '🔧 Manejamos varias perfilarías, cada una con su función:<br><br>• <strong>Perfilería K:</strong> Lleva canal para la cometida de la luz<br>• <strong>Perfilería H:</strong> Une las plaquetas/bloques entre sí<br>• <strong>Perfilería U:</strong> Para remates y bordes<br><br>Todas son parte del sistema estructural. Dejamos los puntos listos para el paso del cableado eléctrico.',
+                answer: '🔧 Manejamos varias perfilerías, cada una con su función:<br><br>• <strong>Perfilería K:</strong> Lleva canal para la cometida de la luz<br>• <strong>Perfilería H:</strong> Une las plaquetas/bloques entre sí<br>• <strong>Perfilería U:</strong> Para remates y bordes<br><br>Todas son parte del sistema estructural. Dejamos los puntos listos para el paso del cableado eléctrico.',
                 followUp: ['¿Incluye electricidad?', '¿Qué incluye?', 'Contactar por WhatsApp']
             },
             {
@@ -99,9 +99,9 @@
                 followUp: ['¿Qué incluye?', '¿Cuánto cuesta?', 'Ver modelos']
             },
             {
-                keywords: ['garantía', 'garantia', 'reclamo', 'respaldo'],
-                answer: '✅ Ofrecemos <strong>garantía de 12 meses</strong> que inician desde el día en que se entrega la vivienda. Cubre defectos de fabricación en materiales y ensamble. Todo respaldado en el contrato.',
-                followUp: ['¿Cuánto duran?', '¿Resisten sismos?', 'Contactar por WhatsApp']
+                keywords: ['garantía', 'garantia', 'reclamo', 'respaldo', 'qué cubre', 'que cubre', 'cubre la garantia'],
+                answer: '✅ <strong>Garantía limitada de 12 meses</strong> desde la fecha de entrega (real o presunta) de la vivienda.<br><br><strong>Cubre</strong> (si lo instalamos nosotros):<br>• Ornamentación metálica<br>• Puertas entamboradas<br>• Cubierta (teja y estructura de soporte)<br>• Distribución de muros según el diseño contratado<br><br><strong>No cubre:</strong><br>❌ Daños por mal uso, golpes, humedad no controlada o falta de mantenimiento<br>❌ Alteraciones, modificaciones o ampliaciones hechas por el cliente o terceros<br>❌ Variaciones de color, tono o textura propias de los materiales<br>❌ Fallas en instalaciones eléctricas, hidráulicas o sanitarias no hechas por nosotros',
+                followUp: ['¿Cómo hago un reclamo?', '¿Cuánto duran?', 'Contactar por WhatsApp']
             },
             {
                 keywords: ['tiempo', 'demora', 'días', 'plazo', 'cuánto tarda', 'rapidez', 'demora construir', 'cuánto se demora'],
@@ -209,7 +209,7 @@
                 followUp: ['¿Cuánto duran?', '¿Resisten sismos?', 'Contactar por WhatsApp']
             },
             {
-                keywords: ['mínimo', 'minimo', 'metros mínimo', 'más pequeña', 'menor', 'desde cuánto'],
+                keywords: ['mínimo', 'minimo', 'minimas', 'mínimas', 'medidas mínimas', 'metros mínimo', 'más pequeña', 'menor', 'desde cuánto'],
                 answer: '📏 Lo mínimo que construimos es desde <strong>12 m²</strong>. A partir de ahí, construimos en cualquier tamaño según tu necesidad y presupuesto.',
                 followUp: ['¿Cuánto cuesta?', '¿Diseños personalizados?', 'Contactar por WhatsApp']
             },
@@ -297,6 +297,56 @@
                 keywords: ['llueve', 'lluvia durante', 'clima', 'mal tiempo'],
                 answer: '🌧️ Si llueve muy fuerte durante la construcción, <strong>no se puede trabajar</strong> hasta que escampe. El clima puede afectar los tiempos de entrega. Por eso el plazo depende también de las condiciones climáticas.',
                 followUp: ['¿Cuánto se demora?', '¿Requisitos del lote?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['método de pago', 'metodo de pago', 'metodos de pago', 'métodos de pago', 'medios de pago', 'cheque', 'transferencia', 'daviplata', 'bancolombia', 'efectivo', 'pagar en', 'cómo pago', 'como pago'],
+                answer: '💳 Puedes pagar por:<br>• <strong>Cheque</strong><br>• <strong>Transferencia</strong> (Bancolombia o Daviplata)<br>• <strong>Efectivo</strong><br><br>Los pagos se hacen por etapas (50% / 40% / 10%) según el contrato de compraventa por obra.',
+                followUp: ['¿Formas de pago?', '¿Cuánto cuesta el m²?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['cotización gratis', 'cotizacion gratis', 'cotizar tiene costo', 'cobran por cotizar', 'cuesta cotizar', 'cotización tiene costo', 'vale cotizar'],
+                answer: '🙌 <strong>La cotización es totalmente gratis</strong> y sin compromiso. Escríbenos con los datos de tu proyecto (medidas, ubicación, lo que quieres construir) y te pasamos el valor.',
+                followUp: ['¿Cuánto cuesta el m²?', '¿Qué incluye?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['atraso', 'atrasar', 'no pago a tiempo', 'me retraso', 'retraso en el pago', 'no alcanzo a pagar', 'qué pasa si no pago', 'que pasa si no pago'],
+                answer: '⚠️ Si se atrasa un pago, <strong>la obra se suspende</strong> hasta que se ponga al día, salvo que lleguemos a un acuerdo o compromiso previo. Por eso recomendamos hablar con nosotros antes de que eso ocurra. 🤝',
+                followUp: ['¿Formas de pago?', '¿Métodos de pago?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['costo placa', 'precio placa', 'placa incluida', 'placa esta incluida', 'placa está incluida', 'incluye la placa', 'placa aparte', 'cuánto cuesta la placa', 'cuanto cuesta la placa'],
+                answer: '🧱 La <strong>placa de cimentación se cobra aparte</strong>, no está incluida en el valor de la vivienda. Su costo depende del área a cimentar y de las condiciones del terreno. Te la cotizamos junto con la vivienda.',
+                followUp: ['¿Quién hace la placa de cimentación?', '¿Requisitos del lote?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['acta de entrega', 'acta entrega', 'recibo de entrega', 'entregan acta', 'constancia de entrega', 'papel de entrega'],
+                answer: '📝 <strong>Sí, entregamos acta de entrega.</strong> Al finalizar la instalación firmamos el acta de entrega y recepción de la obra, donde queda constancia de todo. Así ambas partes tienen respaldo.',
+                followUp: ['¿Qué pasa si encuentro un defecto?', '¿Garantía?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['defecto', 'daño al recibir', 'algo mal', 'reclamo', 'cómo reclamo', 'como reclamo', 'encuentro un problema', 'revisar la casa', 'observaciones', 'algo malo'],
+                answer: '🔍 Tienes <strong>3 días hábiles</strong> después de la entrega para revisar la casa. Si encuentras algo, nos notificas con <strong>evidencias (fotos)</strong>. Nosotros evaluamos la situación y tenemos <strong>15 días hábiles</strong> para dar solución. Todo queda respaldado en el contrato. ✅',
+                followUp: ['¿Garantía?', '¿Acta de entrega?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['calor', 'caliente', 'calienta', 'temperatura', 'fresca', 'fresco', 'calurosa', 'hace calor adentro', 'clima interior'],
+                answer: '🌡️ La temperatura interior es <strong>como la de cualquier casa</strong>: depende del sol y del clima de la zona. No se calienta más que una construcción convencional. Con buena ventilación y el voladizo del techo se mantiene cómoda. ☀️',
+                followUp: ['¿Qué es plaqueta?', '¿Qué es bloquelon?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['negocio', 'local', 'comercial', 'tienda', 'oficina', 'usar como local', 'para negocio', 'local comercial'],
+                answer: '🏪 <strong>¡Claro que sí!</strong> Puedes usar la construcción como <strong>negocio o local comercial</strong>, no solo como vivienda. También hacemos kioscos, cabañas y bodegas para uso comercial.',
+                followUp: ['¿Qué construyen?', '¿Cuánto cuesta?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['trasladar', 'mudar', 'mover la casa', 'desarmar', 'reubicar', 'llevar a otro lado', 'se puede mover', 'se puede trasladar'],
+                answer: '🚚 <strong>Sí, se puede trasladar.</strong> Al ser un sistema prefabricado, la vivienda se puede desarmar y reubicar en otro lugar. Consúltanos para evaluar tu caso y cotizar el traslado.',
+                followUp: ['¿Requisitos del lote?', '¿Cuánto cuesta?', 'Contactar por WhatsApp']
+            },
+            {
+                keywords: ['permiso', 'licencia', 'licencia de construcción', 'permiso de construcción', 'curaduría', 'curaduria', 'legalizar', 'planeación'],
+                answer: '📋 <strong>En algunos casos sí se necesita permiso</strong>, depende de dónde vayas a construir. Por ejemplo, algunos condominios campestres son estrictos con los requisitos. Lo mejor es que verifiques con la administración o alcaldía de tu zona. Si tienes dudas, consúltanos. 🏡',
+                followUp: ['¿Sirve para zona rural?', '¿Requisitos del lote?', 'Contactar por WhatsApp']
             }
         ],
 
@@ -360,13 +410,13 @@
     function showInitialOptions() {
         options.innerHTML = '';
         const categories = [
-            { label: '🏠 Sobre la vivienda', opts: ['¿Cuánto duran?', '¿Resisten sismos?', '¿Se puede ampliar?', '¿Se filtra con lluvia?', '¿Se rompen las paredes?', '¿Diferencia con ladrillo?', '¿Se puede pintar o pañetar?', '¿Se puede colgar TV o estantes?'] },
+            { label: '🏠 Sobre la vivienda', opts: ['¿Cuánto duran?', '¿Resisten sismos?', '¿Se puede ampliar?', '¿Se filtra con lluvia?', '¿Se rompen las paredes?', '¿Diferencia con ladrillo?', '¿Se puede pintar o pañetar?', '¿Se puede colgar TV o estantes?', '¿Hace calor adentro?', '¿Se puede usar como negocio?', '¿Se puede trasladar?'] },
             { label: '📦 ¿Qué incluye?', opts: ['¿Qué incluye?', '¿Qué NO incluye?', '¿Incluye baños?', '¿Incluye electricidad?', '¿Tipo de ventana apertura o corredera?', '¿Tipo de techo?', '¿Qué es la perfilería?'] },
             { label: '📐 Medidas y diseños', opts: ['¿Medidas de puertas?', '¿Medidas de ventanas?', '¿Diseños personalizados?', '¿Mínimo de m²?', '¿Hacen 2 pisos?', '¿Se puede poner enchape o cerámica?'] },
-            { label: '💰 Costos y pagos', opts: ['¿Cuánto cuesta el m²?', '¿Casa más económica?', '¿Formas de pago?', '¿Garantía?'] },
+            { label: '💰 Costos y pagos', opts: ['¿Cuánto cuesta el m²?', '¿Casa más económica?', '¿Formas de pago?', '¿Métodos de pago?', '¿La cotización tiene costo?', '¿Qué pasa si me atraso en un pago?', '¿La placa está incluida?', '¿Garantía?'] },
             { label: '🧱 Sistemas constructivos', opts: ['¿Qué es plaqueta?', '¿Qué es bloquelon?', '¿La plaqueta lleva malla?', '¿Ruido entre cuartos?', '¿Quién hace la placa de cimentación?'] },
-            { label: '📍 Contacto y proceso', opts: ['¿Horario de atención?', '¿Dónde están?', '¿Cuánto se demora?', '¿Puedo ir a ver la construcción?', '¿Firman contrato legal?', 'Contactar por WhatsApp'] },
-            { label: '❓ Otras preguntas', opts: ['¿Sirve para zona rural?', '¿Terreno inclinado?', '¿Instalan en otra ciudad?', '¿Tienen fotos?', '¿Hacen cerramientos?', '¿Hacen remodelaciones?', '¿Las puertas tienen plagas?'] }
+            { label: '📍 Contacto y proceso', opts: ['¿Horario de atención?', '¿Dónde están?', '¿Cuánto se demora?', '¿Puedo ir a ver la construcción?', '¿Firman contrato legal?', '¿Acta de entrega?', '¿Qué pasa si encuentro un defecto?', 'Contactar por WhatsApp'] },
+            { label: '❓ Otras preguntas', opts: ['¿Sirve para zona rural?', '¿Terreno inclinado?', '¿Instalan en otra ciudad?', '¿Tienen fotos?', '¿Hacen cerramientos?', '¿Hacen remodelaciones?', '¿Las puertas tienen plagas?', '¿Necesito permiso de construcción?'] }
         ];
 
         categories.forEach(cat => {

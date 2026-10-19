@@ -35,7 +35,7 @@
             },
             {
                 keywords: ['malla', 'plaqueta malla', 'refuerzo', 'hierro', 'varilla', 'acero', 'armadura', 'cemento entre'],
-                answer: '🧱 <strong>No.</strong> La plaqueta <strong>no lleva malla</strong>. Tampoco lleva cemento entre plaqueta y plaqueta al momento de instalar. Son placas de 3 cm en concreto reforzado con piedra de río que se ensamblan directamente con la perfilería (K, H, U según corresponda). El sistema es seco.',
+                answer: '🧱 <strong>No lleva malla.</strong> La plaqueta se fabrica con <strong>concreto, piedra y varilla</strong> (la varilla es el refuerzo). Tampoco lleva cemento entre plaqueta y plaqueta al momento de instalar: se ensamblan directamente con la perfilería (K, H, U según corresponda). El sistema es seco.',
                 followUp: ['¿Qué es la perfilería?', '¿Qué es bloquelon?', '¿Resisten sismos?']
             },
             {
@@ -70,7 +70,7 @@
             },
             {
                 keywords: ['plaqueta', 'sistema plaqueta'],
-                answer: 'El <strong>sistema plaqueta</strong> usa placas de 3 cm en concreto reforzado con piedra de río. <strong>No lleva malla ni cemento entre plaquetas.</strong> Altura mínima de pared: <strong>2.66m</strong>. Se ensambla con perfilería (K, H, U). 🧱',
+                answer: 'El <strong>sistema plaqueta</strong> usa placas de 3 cm hechas con <strong>concreto, piedra y varilla</strong>. <strong>No lleva malla ni cemento entre plaquetas.</strong> Altura mínima de pared: <strong>2.66m</strong>. Se ensambla con perfilería (K, H, U). 🧱',
                 followUp: ['¿La plaqueta lleva malla?', '¿Medidas de puertas?', '¿Qué es bloquelon?']
             },
             {
@@ -205,7 +205,7 @@
             },
             {
                 keywords: ['rompe', 'rompen', 'romper', 'golpe', 'frágil', 'débil', 'resistente golpe', 'sólid', 'fuerte', 'pared resistente'],
-                answer: '💪 Las paredes <strong>no se rompen fácilmente</strong>. Son de concreto reforzado (plaqueta) o bloque de 8 cm (bloquelon). Eso sí, no se deben golpear muy fuerte intencionalmente. Son resistentes para uso normal de una vivienda.',
+                answer: '💪 Las paredes <strong>no se rompen fácilmente</strong>. Son de concreto, piedra y varilla (plaqueta) o bloque de 8 cm (bloquelon). Eso sí, no se deben golpear muy fuerte intencionalmente. Son resistentes para uso normal de una vivienda.',
                 followUp: ['¿Cuánto duran?', '¿Resisten sismos?', 'Contactar por WhatsApp']
             },
             {
@@ -275,7 +275,7 @@
             },
             {
                 keywords: ['metro cuadrado', 'm2', 'precio m2', 'valor m2', 'costo metro', 'cuánto cuesta el m', 'precio por metro'],
-                answer: '💰 <strong>Precio por m² en Villavicencio:</strong><br><br>• <strong>Plaqueta:</strong> $340.000 / m²<br>• <strong>Bloquelon:</strong> $460.000 / m²<br><br>A eso se suma según el estilo: portones, ornamentación exclusiva, tipo de techo, etc. Este precio es referencia para Villavicencio, en otros lugares varía por transporte.',
+                answer: '💰 <strong>Precio por m² en Villavicencio:</strong><br><br>• <strong>Plaqueta:</strong> $350.000 / m²<br>• <strong>Bloquelon:</strong> $460.000 / m²<br><br>A eso se suma según el estilo: portones, ornamentación exclusiva, tipo de techo, etc. Este precio es referencia para Villavicencio, en otros lugares varía por transporte.',
                 followUp: ['¿Casa más económica?', '¿Formas de pago?', 'Contactar por WhatsApp']
             },
             {

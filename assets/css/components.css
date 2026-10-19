@@ -416,14 +416,9 @@
 }
 
 /* --- Sistema constructivo cards (Plaqueta / Bloquelon) — highlighted --- */
+/* Clean look: no heavy borders or dividers, just a subtle badge + accent */
 .sistema-card {
     position: relative;
-    border: 2px solid #0d9488 !important; /* teal accent to stand out */
-    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.15) !important;
-}
-
-.sistema-card:hover {
-    box-shadow: 0 16px 44px rgba(13, 148, 136, 0.28) !important;
 }
 
 .sistema-badge {
@@ -440,11 +435,6 @@
     border-radius: 2rem;
     text-transform: uppercase;
     box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
-}
-
-.sistema-caption {
-    background: linear-gradient(135deg, #f0fdfa, #ffffff);
-    border-top: 3px solid #0d9488;
 }
 
 .sistema-accent {

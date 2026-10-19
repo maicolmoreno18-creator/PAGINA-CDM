@@ -25,32 +25,46 @@ class ImageSlider {
         this._observe();
     }
 
-    show(index) {
+    show(index, direction = 1) {
         if (!this.imgEl) return;
-        // Minimal cross-fade: fade out, swap once loaded, fade back in.
-        this.imgEl.style.opacity = '0';
+        // Slide transition: current image slides out, new one slides in from
+        // the opposite side. direction = 1 -> next (slide left), -1 -> prev.
+        const img = this.imgEl;
+        const outX = direction > 0 ? '-30px' : '30px';
+        const inX = direction > 0 ? '30px' : '-30px';
+
+        img.style.transition = 'transform 0.22s ease, opacity 0.22s ease';
+        img.style.transform = `translateX(${outX})`;
+        img.style.opacity = '0';
+
         const swap = () => {
-            this.imgEl.src = this.images[index];
-            // next frame so the browser registers the opacity change smoothly
-            requestAnimationFrame(() => { this.imgEl.style.opacity = '1'; });
+            img.src = this.images[index];
+            // place new image on the entering side, then animate to center
+            img.style.transition = 'none';
+            img.style.transform = `translateX(${inX})`;
+            img.style.opacity = '0';
+            requestAnimationFrame(() => {
+                img.style.transition = 'transform 0.26s ease, opacity 0.26s ease';
+                img.style.transform = 'translateX(0)';
+                img.style.opacity = '1';
+            });
             if (this.counterEl) {
                 this.counterEl.textContent = (index + 1) + ' / ' + this.images.length;
             }
-            // keep the open lightbox in sync with the active slider
-            if (ImageSlider.activeLightbox === this) this._updateLightbox();
+            if (ImageSlider.activeLightbox === this) this._updateLightbox(direction);
         };
-        setTimeout(swap, 220);
+        setTimeout(swap, 180);
     }
 
     next() {
         this.index = (this.index + 1) % this.images.length;
-        this.show(this.index);
+        this.show(this.index, 1);
         this._resetTimer();
     }
 
     prev() {
         this.index = (this.index - 1 + this.images.length) % this.images.length;
-        this.show(this.index);
+        this.show(this.index, -1);
         this._resetTimer();
     }
 
@@ -74,11 +88,30 @@ class ImageSlider {
         bootstrap.Modal.getOrCreateInstance(modalEl).show();
     }
 
-    _updateLightbox() {
+    _updateLightbox(direction = 0) {
         const lightboxImg = document.getElementById('lightboxImg');
         const counter = document.getElementById('lightboxCounter');
         const nav = document.getElementById('lightboxNav');
-        if (lightboxImg) lightboxImg.src = this.images[this.index];
+        if (lightboxImg) {
+            if (direction !== 0) {
+                // slide the big image in the same direction as the thumbnail
+                const inX = direction > 0 ? '40px' : '-40px';
+                lightboxImg.style.transition = 'none';
+                lightboxImg.style.transform = `translateX(${inX})`;
+                lightboxImg.style.opacity = '0';
+                lightboxImg.src = this.images[this.index];
+                requestAnimationFrame(() => {
+                    lightboxImg.style.transition = 'transform 0.26s ease, opacity 0.26s ease';
+                    lightboxImg.style.transform = 'translateX(0)';
+                    lightboxImg.style.opacity = '1';
+                });
+            } else {
+                lightboxImg.style.transition = 'none';
+                lightboxImg.style.transform = 'translateX(0)';
+                lightboxImg.style.opacity = '1';
+                lightboxImg.src = this.images[this.index];
+            }
+        }
         if (counter) counter.textContent = (this.index + 1) + ' / ' + this.images.length;
         // only show the nav arrows when there is more than one image
         if (nav) nav.style.display = this.images.length > 1 ? '' : 'none';

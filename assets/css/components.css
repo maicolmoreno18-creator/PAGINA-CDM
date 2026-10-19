@@ -343,15 +343,20 @@
     font-size: 0.85rem;
 }
 
-/* --- Minimal slider image transition --- */
-/* Softer, slower cross-fade for a cleaner, more minimalist feel */
+/* --- Slider image transition (slide/barrido handled inline by JS) --- */
+/* Hide any horizontal overflow during the slide so nothing peeks outside */
+.slider-tejas,
+.slider-tamborada,
+.slider-orna,
+.slider-ventana {
+    overflow: hidden;
+}
 .slider-tejas img,
 .slider-tamborada img,
 .slider-orna img,
 .slider-ventana img,
 #sliderImg {
-    transition: opacity 0.45s ease !important;
-    will-change: opacity;
+    will-change: transform, opacity;
 }
 
 /* --- Lightbox navigation (arrows + counter inside the modal) --- */

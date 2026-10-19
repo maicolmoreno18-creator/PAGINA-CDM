@@ -415,6 +415,42 @@
     transition: var(--transition);
 }
 
+/* --- Sistema constructivo cards (Plaqueta / Bloquelon) — highlighted --- */
+.sistema-card {
+    position: relative;
+    border: 2px solid #0d9488 !important; /* teal accent to stand out */
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.15) !important;
+}
+
+.sistema-card:hover {
+    box-shadow: 0 16px 44px rgba(13, 148, 136, 0.28) !important;
+}
+
+.sistema-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3;
+    background: linear-gradient(135deg, #0f766e, #0d9488);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.32rem 0.85rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
+}
+
+.sistema-caption {
+    background: linear-gradient(135deg, #f0fdfa, #ffffff);
+    border-top: 3px solid #0d9488;
+}
+
+.sistema-accent {
+    color: #0d9488 !important;
+}
+
 .gallery-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg) !important;

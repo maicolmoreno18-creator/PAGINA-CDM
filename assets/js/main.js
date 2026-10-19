@@ -23,6 +23,15 @@ class ImageSlider {
 
         this._bindLightbox();
         this._observe();
+        // Preload the next image so the first transition is instant
+        this._preload(1);
+    }
+
+    // Preload an image by offset from the current index (does not display it)
+    _preload(offset = 1) {
+        const i = (this.index + offset + this.images.length) % this.images.length;
+        const pre = new Image();
+        pre.src = this.images[i];
     }
 
     show(index, direction = 1) {
@@ -52,6 +61,8 @@ class ImageSlider {
                 this.counterEl.textContent = (index + 1) + ' / ' + this.images.length;
             }
             if (ImageSlider.activeLightbox === this) this._updateLightbox(direction);
+            // Preload the upcoming image in the same direction for a smooth next slide
+            this._preload(direction > 0 ? 1 : -1);
         };
         setTimeout(swap, 180);
     }
@@ -218,15 +229,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Initialize sliders ---
     ornaSlider = new ImageSlider({
         images: [
-            'assets/images/orna 1.png','assets/images/orna 2.png','assets/images/orna 3.png',
-            'assets/images/orna 4.png','assets/images/orna 5.png','assets/images/orna 6.png',
-            'assets/images/orna 7.png','assets/images/orna 8.png','assets/images/orna 9.png',
-            'assets/images/orna 10.png','assets/images/orna 11.png','assets/images/orna 12.png',
-            'assets/images/orna 13.png','assets/images/orna 14.png','assets/images/orna 15.png',
-            'assets/images/orna 16.png','assets/images/orna 17.png','assets/images/orna 18.png',
-            'assets/images/orna 19.png','assets/images/orna 20.png','assets/images/orna 21.png',
-            'assets/images/orna 22.png','assets/images/orna 23.png','assets/images/orna 24.png',
-            'assets/images/orna 25.png','assets/images/orna 26.png','assets/images/orna 27.png'
+            'assets/images/orna-1.png','assets/images/orna-2.png','assets/images/orna-3.png',
+            'assets/images/orna-4.png','assets/images/orna-5.png','assets/images/orna-6.png',
+            'assets/images/orna-7.png','assets/images/orna-8.png','assets/images/orna-9.png',
+            'assets/images/orna-10.png','assets/images/orna-11.png','assets/images/orna-12.png',
+            'assets/images/orna-13.png','assets/images/orna-14.png','assets/images/orna-15.png',
+            'assets/images/orna-16.png','assets/images/orna-17.png','assets/images/orna-18.png',
+            'assets/images/orna-19.png','assets/images/orna-20.png','assets/images/orna-21.png',
+            'assets/images/orna-22.png','assets/images/orna-23.png','assets/images/orna-24.png',
+            'assets/images/orna-25.png','assets/images/orna-26.png','assets/images/orna-27.png'
         ],
         imgId: 'ornaImg',
         counterId: 'ornaCounter'
@@ -234,11 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tamboradaSlider = new ImageSlider({
         images: [
-            'assets/images/tamborada 1.png',
-            'assets/images/tamborada 2.png',
-            'assets/images/tamborada 3.png',
-            'assets/images/tamborada 4.png',
-            'assets/images/tamborada 5.png'
+            'assets/images/tamborada-1.png',
+            'assets/images/tamborada-2.png',
+            'assets/images/tamborada-3.png',
+            'assets/images/tamborada-4.png',
+            'assets/images/tamborada-5.png'
         ],
         imgId: 'tamboradaImg',
         counterId: 'tamboradaCounter'
@@ -246,10 +257,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ventanaSlider = new ImageSlider({
         images: [
-            'assets/images/ventana 1.png','assets/images/ventana 2.png','assets/images/ventana 3.png',
-            'assets/images/ventana 4.png','assets/images/ventana 5.png','assets/images/ventana 6.png',
-            'assets/images/ventana 7.png','assets/images/ventana 8.png','assets/images/ventana 9.png',
-            'assets/images/ventana 10.png','assets/images/ventana 11.png'
+            'assets/images/ventana-1.png','assets/images/ventana-2.png','assets/images/ventana-3.png',
+            'assets/images/ventana-4.png','assets/images/ventana-5.png','assets/images/ventana-6.png',
+            'assets/images/ventana-7.png','assets/images/ventana-8.png','assets/images/ventana-9.png',
+            'assets/images/ventana-10.png','assets/images/ventana-11.png'
         ],
         imgId: 'ventanaImg',
         counterId: 'ventanaCounter'
@@ -257,9 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tejaSlider = new ImageSlider({
         images: [
-            'assets/images/teja 1.jpeg',
-            'assets/images/teja 2.jpeg',
-            'assets/images/teja 3.jpeg'
+            'assets/images/teja-1.jpeg',
+            'assets/images/teja-2.jpeg',
+            'assets/images/teja-3.jpeg'
         ],
         imgId: 'tejaImg',
         counterId: 'tejaCounter'
@@ -267,19 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     obrasSlider = new ImageSlider({
         images: [
-            'assets/images/modelo 1.jpeg','assets/images/modelo 2.jpeg','assets/images/modelo 3.jpeg',
-            'assets/images/modelo 4.jpeg','assets/images/modelo 5.jpeg','assets/images/modelo 6.jpeg',
-            'assets/images/modelo 7.jpeg','assets/images/modelo 8.jpeg','assets/images/modelo 9.jpeg',
-            'assets/images/modelo 10.jpeg','assets/images/modelo 11.jpeg','assets/images/modelo 12.jpeg',
-            'assets/images/modelo 13.jpeg','assets/images/modelo 14.jpeg','assets/images/modelo 15.jpeg',
-            'assets/images/modelo 16.jpeg','assets/images/modelo 17.jpeg','assets/images/modelo 18.jpeg',
-            'assets/images/modelo 19.jpeg','assets/images/modelo 20.jpeg','assets/images/modelo 21.jpeg',
-            'assets/images/modelo 22.jpeg','assets/images/modelo 23.jpeg','assets/images/modelo 24.jpeg',
-            'assets/images/modelo 25.jpeg','assets/images/modelo 26.jpeg','assets/images/modelo 27.jpeg',
-            'assets/images/modelo 28.jpeg','assets/images/modelo 29.jpeg','assets/images/modelo 30.jpeg',
-            'assets/images/modelo 31.jpeg','assets/images/modelo 32.jpeg','assets/images/modelo 33.jpeg',
-            'assets/images/modelo 34.jpeg','assets/images/modelo 35.jpeg','assets/images/modelo 36.jpeg',
-            'assets/images/modelo 37.jpeg','assets/images/modelo 38.jpeg','assets/images/modelo 39.jpeg'
+            'assets/images/modelo-1.jpeg','assets/images/modelo-2.jpeg','assets/images/modelo-3.jpeg',
+            'assets/images/modelo-4.jpeg','assets/images/modelo-5.jpeg','assets/images/modelo-6.jpeg',
+            'assets/images/modelo-7.jpeg','assets/images/modelo-8.jpeg','assets/images/modelo-9.jpeg',
+            'assets/images/modelo-10.jpeg','assets/images/modelo-11.jpeg','assets/images/modelo-12.jpeg',
+            'assets/images/modelo-13.jpeg','assets/images/modelo-14.jpeg','assets/images/modelo-15.jpeg',
+            'assets/images/modelo-16.jpeg','assets/images/modelo-17.jpeg','assets/images/modelo-18.jpeg',
+            'assets/images/modelo-19.jpeg','assets/images/modelo-20.jpeg','assets/images/modelo-21.jpeg',
+            'assets/images/modelo-22.jpeg','assets/images/modelo-23.jpeg','assets/images/modelo-24.jpeg',
+            'assets/images/modelo-25.jpeg','assets/images/modelo-26.jpeg','assets/images/modelo-27.jpeg',
+            'assets/images/modelo-28.jpeg','assets/images/modelo-29.jpeg','assets/images/modelo-30.jpeg',
+            'assets/images/modelo-31.jpeg','assets/images/modelo-32.jpeg','assets/images/modelo-33.jpeg',
+            'assets/images/modelo-34.jpeg','assets/images/modelo-35.jpeg','assets/images/modelo-36.jpeg',
+            'assets/images/modelo-37.jpeg','assets/images/modelo-38.jpeg','assets/images/modelo-39.jpeg'
         ],
         imgId: 'sliderImg',
         counterId: 'obraCounter'

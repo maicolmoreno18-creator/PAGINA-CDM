@@ -1,0 +1,98 @@
+/* =============================================
+   PrefabHome — Section-Specific Styles
+   ============================================= */
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    background: url('../images/modelo%201.jpeg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(37, 99, 235, 0.6) 100%);
+    z-index: 0;
+}
+
+.hero-title {
+    line-height: 1.1;
+}
+
+.hero-section .container {
+    padding-top: 130px;
+}
+
+.hero-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: white;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    right: -5%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+/* --- About Section --- */
+.about-images {
+    position: relative;
+}
+
+.main-img {
+    width: 85%;
+}
+
+.floating-img {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    border: 5px solid white;
+    animation: floatSmall 4s ease-in-out infinite;
+}
+
+.experience-badge {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background: var(--primary);
+    color: white;
+    padding: 1.2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* =============================================
+   Keyframe Animations
+   ============================================= */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+@keyframes floatSmall {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

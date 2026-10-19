@@ -343,6 +343,68 @@
     font-size: 0.85rem;
 }
 
+/* --- Minimal slider image transition --- */
+/* Softer, slower cross-fade for a cleaner, more minimalist feel */
+.slider-tejas img,
+.slider-tamborada img,
+.slider-orna img,
+.slider-ventana img,
+#sliderImg {
+    transition: opacity 0.45s ease !important;
+    will-change: opacity;
+}
+
+/* --- Lightbox navigation (arrows + counter inside the modal) --- */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-arrow--prev { left: 10px; }
+.lightbox-arrow--next { right: 10px; }
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 576px) {
+    .lightbox-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+    }
+}
+
 /* --- Gallery Cards --- */
 .gallery-card {
     transition: var(--transition);

@@ -27,14 +27,19 @@ class ImageSlider {
 
     show(index) {
         if (!this.imgEl) return;
+        // Minimal cross-fade: fade out, swap once loaded, fade back in.
         this.imgEl.style.opacity = '0';
-        setTimeout(() => {
+        const swap = () => {
             this.imgEl.src = this.images[index];
-            this.imgEl.style.opacity = '1';
+            // next frame so the browser registers the opacity change smoothly
+            requestAnimationFrame(() => { this.imgEl.style.opacity = '1'; });
             if (this.counterEl) {
                 this.counterEl.textContent = (index + 1) + ' / ' + this.images.length;
             }
-        }, 200);
+            // keep the open lightbox in sync with the active slider
+            if (ImageSlider.activeLightbox === this) this._updateLightbox();
+        };
+        setTimeout(swap, 220);
     }
 
     next() {
@@ -60,12 +65,23 @@ class ImageSlider {
     }
 
     openLightbox() {
+        const modalEl = document.getElementById('lightboxModal');
+        if (!modalEl) return;
+        // mark this slider as the one controlling the lightbox
+        ImageSlider.activeLightbox = this;
+        this.stop(); // pause autoplay while the user looks at the full image
+        this._updateLightbox();
+        bootstrap.Modal.getOrCreateInstance(modalEl).show();
+    }
+
+    _updateLightbox() {
         const lightboxImg = document.getElementById('lightboxImg');
-        if (lightboxImg) {
-            lightboxImg.src = this.images[this.index];
-            const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-            modal.show();
-        }
+        const counter = document.getElementById('lightboxCounter');
+        const nav = document.getElementById('lightboxNav');
+        if (lightboxImg) lightboxImg.src = this.images[this.index];
+        if (counter) counter.textContent = (this.index + 1) + ' / ' + this.images.length;
+        // only show the nav arrows when there is more than one image
+        if (nav) nav.style.display = this.images.length > 1 ? '' : 'none';
     }
 
     _resetTimer() {
@@ -99,6 +115,13 @@ class ImageSlider {
         observer.observe(this.imgEl.closest('.card') || this.imgEl.parentElement);
     }
 }
+
+// Tracks which slider currently owns the lightbox (for in-modal navigation)
+ImageSlider.activeLightbox = null;
+
+// Global functions for the lightbox arrows
+function lightboxNext() { ImageSlider.activeLightbox && ImageSlider.activeLightbox.next(); }
+function lightboxPrev() { ImageSlider.activeLightbox && ImageSlider.activeLightbox.prev(); }
 
 // ============================================================
 // SLIDER INSTANCES
@@ -326,17 +349,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
 
-    // --- Lightbox for plaqueta/bloquelon images ---
+    // --- Lightbox for plaqueta/bloquelon images (single image, no nav) ---
     document.querySelectorAll('[data-src]').forEach(img => {
         img.addEventListener('click', (e) => {
             const src = e.currentTarget.getAttribute('data-src');
             const lightboxImg = document.getElementById('lightboxImg');
+            const nav = document.getElementById('lightboxNav');
             if (lightboxImg && src) {
+                ImageSlider.activeLightbox = null; // standalone image, no slider
+                if (nav) nav.style.display = 'none';
                 lightboxImg.src = src;
-                const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-                modal.show();
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('lightboxModal')).show();
             }
         });
     });
+
+    // --- Lightbox navigation & cleanup ---
+    const lightboxModal = document.getElementById('lightboxModal');
+    if (lightboxModal) {
+        // When the lightbox closes, resume autoplay of the slider that opened it
+        lightboxModal.addEventListener('hidden.bs.modal', () => {
+            if (ImageSlider.activeLightbox) {
+                ImageSlider.activeLightbox.start();
+                ImageSlider.activeLightbox = null;
+            }
+        });
+        // Keyboard arrows navigate the active slider inside the lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('show')) return;
+            if (!ImageSlider.activeLightbox) return;
+            if (e.key === 'ArrowRight') lightboxNext();
+            else if (e.key === 'ArrowLeft') lightboxPrev();
+        });
+    }
 
 });

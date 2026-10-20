@@ -120,7 +120,7 @@
             },
             {
                 keywords: ['whatsapp', 'contactar', 'llamar', 'teléfono', 'celular', 'número', 'comunicar'],
-                answer: '📲 Escríbenos a:<br><strong>+57 314 359 2700</strong> (WhatsApp y llamada)<br><strong>+57 350 283 7223</strong> (Solo WhatsApp)<br><strong>+57 314 254 1832</strong> (Solo WhatsApp)<br><br>¿Quieres que te redirija?',
+                answer: '📲 Escríbenos a:<br><strong>+57 350 283 7223</strong> (WhatsApp principal)<br><strong>+57 314 359 2700</strong> (WhatsApp y llamada)<br><strong>+57 314 254 1832</strong> (Solo WhatsApp)<br><br>¿Quieres que te redirija?',
                 followUp: ['Ir a WhatsApp', '¿Dónde están?', '¿Horario de atención?']
             },
             {
@@ -358,8 +358,8 @@
     // ACTION HANDLERS
     // ============================================================
     const actions = {
-        'Contactar por WhatsApp': () => window.open('https://wa.me/573143592700?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20casas%20prefabricadas', '_blank'),
-        'Ir a WhatsApp': () => window.open('https://wa.me/573143592700?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20casas%20prefabricadas', '_blank'),
+        'Contactar por WhatsApp': () => window.open('https://wa.me/573502837223?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20casas%20prefabricadas', '_blank'),
+        'Ir a WhatsApp': () => window.open('https://wa.me/573502837223?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20casas%20prefabricadas', '_blank'),
         'Quiero cotizar': () => { document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); },
         'Ver modelos': () => { document.getElementById('modelos').scrollIntoView({ behavior: 'smooth' }); },
         'Ver en el mapa': () => window.open('https://google.com/maps?q=4.1365238,-73.6033852&z=17&hl=es', '_blank'),

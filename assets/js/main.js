@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
 *Tipo de construcción:* ${sanitize(modelo) || 'No especificado'}
 *Mensaje:* ${sanitize(mensaje) || 'Sin mensaje adicional'}`;
 
-            const url = `https://wa.me/573143592700?text=${encodeURIComponent(texto)}`;
+            const url = `https://wa.me/573502837223?text=${encodeURIComponent(texto)}`;
 
             btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>¡Redirigiendo a WhatsApp!';
             btn.classList.replace('btn-primary', 'btn-success');
